@@ -35,4 +35,7 @@ if command -v pyenv >/dev/null 2>&1; then
 fi
 
 # Aliases
+alias ls="eza --icons --color=always"
+alias ll="eza --icons --color=always -la"
+alias lt="eza --icons --color=always --tree --level=2"
 alias cl="claude"

@@ -42,6 +42,17 @@ if ! command -v wezterm >/dev/null 2>&1; then
     sudo apt update && sudo apt install -y wezterm
 fi
 
+# --- eza (modern ls) ---
+if ! command -v eza >/dev/null 2>&1; then
+    echo "Installing eza..."
+    sudo apt install -y eza || {
+        sudo mkdir -p /etc/apt/keyrings
+        wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+        echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+        sudo apt update && sudo apt install -y eza
+    }
+fi
+
 # --- Copy config files ---
 echo ""
 echo "Copying config files..."
