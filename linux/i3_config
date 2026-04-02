@@ -18,7 +18,7 @@ default_border pixel 5
 default_floating_border pixel 5
 
 # class                 border  backgr  text    indicator child_border
-client.focused          #d3869b #d3869b #282828 #d3869b   #d3869b
+client.focused          #d79921 #d79921 #282828 #d79921   #d79921
 client.focused_inactive #282828 #282828 #ebdbb2 #282828   #282828
 client.unfocused        #282828 #282828 #a89984 #282828   #282828
 client.urgent           #fb4934 #fb4934 #282828 #fb4934   #fb4934
@@ -115,7 +115,7 @@ bar {
         separator  #665c54
 
         # class            border  backgr  text
-        focused_workspace  #d3869b #d3869b #282828
+        focused_workspace  #d79921 #d79921 #282828
         active_workspace   #282828 #282828 #ebdbb2
         inactive_workspace #282828 #282828 #a89984
         urgent_workspace   #fb4934 #fb4934 #282828
