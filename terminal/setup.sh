@@ -77,7 +77,8 @@ else
     mkdir -p "$HOME/.local/share/fonts"
     # Noto Sans Mono Nerd Font
     if ! fc-list | grep -qi "NotoSansM Nerd"; then
-        curl -fsSL -o /tmp/NotoSansMono.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NotoSansMono.zip"
+        curl -fsSL -L -o /tmp/NotoSansMono.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NotoSansMNerdFont.zip" || \
+        curl -fsSL -L -o /tmp/NotoSansMono.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NotoSansMono.zip"
         unzip -o /tmp/NotoSansMono.zip -d "$HOME/.local/share/fonts/NotoSansMono/"
         rm /tmp/NotoSansMono.zip
     fi

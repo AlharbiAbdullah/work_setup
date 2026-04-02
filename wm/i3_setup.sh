@@ -22,7 +22,7 @@ sudo apt install -y \
     feh \
     picom \
     dunst \
-    nm-applet \
+    network-manager-gnome \
     xclip
 
 # --- Create config directories ---
